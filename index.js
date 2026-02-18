@@ -48,6 +48,9 @@ function getUppercaseNames(items) {
  */
 function getItemById(items, id) {
   // TODO: use `find`
+  let itemId = items.find((item) => item.id === id);
+  return itemId;
+
 }
 
 /**
@@ -57,6 +60,12 @@ function getItemById(items, id) {
  */
 function getItemPriceByName(items, name) {
   // TODO: use a loop!
+  for (i = 0; i < items.length; ++i) {
+    //console.log(items[i].name)
+    if (name === items[i].name) {
+      return items[i].price;
+    }
+  }
 }
 
 /**
@@ -111,3 +120,4 @@ console.log(
 const category = prompt("Enter a category you would like to see:", "fruit");
 console.log(`The items in the ${category} category are:`);
 console.log(getItemsByCategory(inventory, category));
+
