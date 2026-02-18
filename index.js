@@ -28,6 +28,7 @@ const inventory = [
 function logNames(items) {
   // TODO: use `forEach`
   inventory.forEach((item) => console.log(item.name));
+  //inventory.forEach(() => console.log("anotherItem")) explanation practice
 }
 
 /**
@@ -36,7 +37,8 @@ function logNames(items) {
  */
 function getUppercaseNames(items) {
   // TODO: use `map`
-  inventory.map((item) => inventory.toUpperCase(item.name));
+  let upperCaseItems = inventory.map((item) => item.name.toUpperCase());
+  return upperCaseItems;
 }
 
 /**
